@@ -1,5 +1,4 @@
-import functools
-import utils
+import app.utils as utils
 import requests
 import urllib.parse
 
@@ -12,7 +11,7 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 @bp.route('/callback', methods=('GET', 'POST'))
 def callback():
-    pass
+    return '<callback>'
 
 @bp.route('/client_id', methods=('GET',))
 def client_id():
